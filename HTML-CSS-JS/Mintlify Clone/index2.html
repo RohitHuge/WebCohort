@@ -1,290 +1,385 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mintlify - The Intelligent Documentation Platform</title>
-  <meta name="description"
-    content="Meet the next generation of documentation. AI-native, beautiful out-of-the-box, and built for developers.">
-  <link rel="stylesheet" href="style.css">
-  <!-- Preload critical fonts -->
-  <link rel="preload" href="./Mintlify - The Intelligent Documentation Platform_files/4fa387ec64143e14-s.c1fdd6c2.woff2"
-    as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./Mintlify - The Intelligent Documentation Platform_files/InterVariable-s.p.494bb210.ttf"
-    as="font" type="font/ttf" crossorigin>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mintlify </title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <!-- Logo -->
-      <a href="/" class="logo-link" aria-label="Mintlify Home">
-        <svg width="104" height="24" viewBox="0 0 104 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M18.4725 9.60528V3.91396C18.4725 3.30323 17.977 2.81641 17.3754 2.81641H11.6867C10.7931 2.81641 9.90842 2.99342 9.08564 3.32977C8.26285 3.67497 7.51085 4.17064 6.88271 4.80793L6.83847 4.85219C6.00684 5.69305 5.41408 6.73749 5.11328 7.88815C5.65296 7.74653 6.2103 7.67572 6.76767 7.66687C8.25399 7.64916 9.71378 8.12713 10.8993 9.02111C11.9698 9.81771 12.7837 10.9153 13.2261 12.181C13.6861 13.4644 13.7392 14.8629 13.3942 16.1817C14.5354 15.8808 15.5883 15.2878 16.4288 14.4558L16.473 14.4115C17.1011 13.7831 17.6054 13.0307 17.9504 12.2075C18.2955 11.3844 18.4636 10.4993 18.4636 9.60528H18.4725Z"
-            fill="#18E299" />
-          <path
-            d="M4.9434 9.50941C4.95221 7.76347 5.64849 6.08807 6.87361 4.83594L2.14058 9.57113C2.12296 9.58876 2.10532 9.59758 2.08769 9.61522C0.933084 10.7615 0.23681 12.2959 0.122231 13.9183C0.0164654 15.435 0.413078 16.934 1.2592 18.1862C1.33991 18.3056 1.5589 18.3449 1.68229 18.2303L4.58202 15.338C5.48985 14.4298 5.7719 13.0806 5.34002 11.8726C5.06679 11.1231 4.93459 10.3207 4.9434 9.50941Z"
-            fill="#0C8C5E" />
-          <path
-            d="M16.4445 14.4121C15.5367 15.3027 14.3997 15.92 13.1658 16.1933C11.923 16.4667 10.6362 16.3873 9.43757 15.9641C9.43757 15.9641 9.42874 15.9641 9.41992 15.9641C8.21243 15.532 6.86394 15.8141 5.95612 16.7136L3.05634 19.6058C2.93295 19.7293 2.95057 19.9321 3.10041 20.0291C4.35197 20.8668 5.85035 21.2724 7.36632 21.1666C8.98806 21.052 10.5128 20.3553 11.6674 19.2002L11.7115 19.1561L16.4445 14.4209V14.4121Z"
-            fill="#0C8C5E" />
-          <path
-            d="M96.2355 23.5H92.6842L95.1868 17.8513L90.1816 6.60156H93.7568L96.6734 13.6537C96.7753 13.9002 97.1246 13.8997 97.2259 13.653L100.12 6.60156H103.719L96.2355 23.5Z"
-            fill="currentColor" />
-          <path
-            d="M85.4483 18.5186V9.46164H83.041V6.60154H85.4483V5.05232C85.4483 3.63816 85.8773 2.5259 86.7353 1.71554C87.5933 0.90518 88.6818 0.5 90.0006 0.5C90.8109 0.5 91.5021 0.587392 92.0742 0.762175V3.64611C91.6928 3.5031 91.2479 3.4316 90.7394 3.4316C90.0244 3.4316 89.508 3.59049 89.1902 3.90828C88.8724 4.21018 88.7135 4.72659 88.7135 5.4575V6.60154H92.0742V9.46164H88.7135V18.5186H85.4483Z"
-            fill="currentColor" />
-          <path
-            d="M80.1204 4.64714C79.5643 4.64714 79.0797 4.44852 78.6666 4.05129C78.2534 3.63816 78.0469 3.14559 78.0469 2.57357C78.0469 2.00155 78.2534 1.51692 78.6666 1.11969C79.0797 0.706563 79.5643 0.5 80.1204 0.5C80.7084 0.5 81.2009 0.706563 81.5982 1.11969C82.0113 1.51692 82.2178 2.00155 82.2178 2.57357C82.2178 3.14559 82.0113 3.63816 81.5982 4.05129C81.2009 4.44852 80.7084 4.64714 80.1204 4.64714ZM78.4997 18.5186V6.60154H81.765V18.5186H78.4997Z"
-            fill="currentColor" />
-          <path d="M72.8125 18.5182V0.642578H76.0778V18.5182H72.8125Z" fill="currentColor" />
-          <path
-            d="M69.1256 18.6621C67.7909 18.6621 66.6945 18.2966 65.8365 17.5657C64.9943 16.8189 64.5733 15.7464 64.5733 14.3481V9.46211H62.166V6.60201H64.5733V3.28906H67.8385V6.60201H71.1992V9.46211H67.8385V13.7046C67.8385 14.4355 67.9974 14.9598 68.3152 15.2776C68.633 15.5795 69.1494 15.7305 69.8644 15.7305C70.3729 15.7305 70.8178 15.659 71.1992 15.516V18.3999C70.6271 18.5747 69.9359 18.6621 69.1256 18.6621Z"
-            fill="currentColor" />
-          <path
-            d="M49.9434 18.5191V6.60202H53.2086V7.47307C53.2086 7.62037 53.4091 7.6855 53.5066 7.57513C54.2346 6.75161 55.2713 6.33984 56.6169 6.33984C58.047 6.33984 59.1672 6.81653 59.9775 7.76989C60.8038 8.70737 61.2169 9.96263 61.2169 11.5357V18.5191H57.9516V12.0839C57.9516 11.21 57.7689 10.5347 57.4034 10.058C57.038 9.5654 56.5216 9.31911 55.8542 9.31911C55.0598 9.31911 54.4162 9.60512 53.9237 10.1771C53.447 10.7492 53.2086 11.5913 53.2086 12.7036V18.5191H49.9434Z"
-            fill="currentColor" />
-          <path
-            d="M45.8783 4.64714C45.3221 4.64714 44.8375 4.44852 44.4244 4.05129C44.0113 3.63816 43.8047 3.14559 43.8047 2.57357C43.8047 2.00155 44.0113 1.51692 44.4244 1.11969C44.8375 0.706563 45.3221 0.5 45.8783 0.5C46.4662 0.5 46.9587 0.706563 47.356 1.11969C47.7691 1.51692 47.9757 2.00155 47.9757 2.57357C47.9757 3.14559 47.7691 3.63816 47.356 4.05129C46.9587 4.44852 46.4662 4.64714 45.8783 4.64714ZM44.2575 18.5186V6.60154H47.5228V18.5186H44.2575Z"
-            fill="currentColor" />
-          <path
-            d="M38.7147 18.5191V12.1554C38.7147 10.2645 38.095 9.31911 36.8557 9.31911C36.1406 9.31911 35.5686 9.58923 35.1396 10.1295C34.7265 10.6697 34.504 11.4721 34.4722 12.5367V18.5191H31.207V12.1554C31.207 10.2645 30.5873 9.31911 29.3479 9.31911C28.617 9.31911 28.037 9.60512 27.608 10.1771C27.179 10.7492 26.9645 11.5913 26.9645 12.7036V18.5191H23.6992V6.60202H26.9645V7.48165C26.9645 7.62818 27.1615 7.69271 27.2578 7.58222C27.9791 6.75397 28.938 6.33984 30.1344 6.33984C31.7067 6.33984 32.8909 6.98895 33.687 8.28717C33.7498 8.38958 33.9044 8.38799 33.9668 8.28535C34.311 7.71964 34.7893 7.26975 35.4018 6.9357C36.1009 6.53846 36.808 6.33984 37.523 6.33984C38.9372 6.33984 40.0335 6.80858 40.8121 7.74606C41.5907 8.68353 41.98 9.97058 41.98 11.6072V18.5191H38.7147Z"
-            fill="currentColor" />
-        </svg>
-      </a>
-
-      <!-- Navigation -->
-      <nav class="main-nav">
-        <a href="#" class="nav-link">Resources</a>
-        <a href="#" class="nav-link">Documentation</a>
-        <a href="#" class="nav-link">Customers</a>
-        <a href="#" class="nav-link">Blog</a>
-        <a href="#" class="nav-link">Pricing</a>
-      </nav>
-
-      <!-- Actions -->
-      <div class="header-actions">
-        <a href="#" class="btn btn-secondary">Contact sales</a>
-        <a href="#" class="btn btn-primary">Start for free</a>
+  <header class="stick">
+    <nav>
+      <div class="logo">
+        <img src="assets/download (1).svg" alt="" />
       </div>
-    </div>
+      <div class="nav-links">
+        <a href="#">Resources</a>
+        <a href="#">Documentation</a>
+        <a href="#">Customers</a>
+        <a href="#">Blog</a>
+        <a href="#">Pricing</a>
+      </div>
+      <div class="nav-buttons">
+        <button>Contact Sales</button>
+        <button class="nav-cta">Start for free</button>
+      </div>
+    </nav>
   </header>
 
-  <!-- Main Content Placeholder -->
-  <main>
+  <section class="hero-section">
+    <div class="announcement">
+      <span class="badge">NEW</span>
+      <span class="text">Self-updating docs with agent suggestions</span>
+      <span class="arrow">></span>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <a href="#" class="hero-pill">
-          <span class="badge-new">NEW</span>
-          Self-updating docs with agent suggestions
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-            style="margin-left: 4px;">
-            <path d="M6 1L11 6L6 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </a>
+    <div class="hero-content">
+      <h1>
+        The Intelligent <br />
+        Knowledge Platform
+      </h1>
+      <p>
+        Helping teams create and maintain world-class <br />
+        documentation built for both humans and AI
+      </p>
+    </div>
+    <div class="hero-cta">
+      <input type="email" placeholder="  Email Address" />
+      <button>Start Now</button>
+    </div>
+    <div class="hero-image">
+      <img src="assets/hero-image-dark.svg" alt="" />
+    </div>
+  </section>
 
-        <h1 class="hero-title">The Intelligent<br>Knowledge Platform</h1>
-        <p class="hero-description">Helping teams create and maintain world-class documentation built for both humans
-          and AI</p>
+  <section class="companies-logos">
+    <div class="logos-grid">
+      <img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-15-C4b9wwRh.svg" alt="Anthropic" />
+      <img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-16-DFS7qz9D.svg" alt="Coinbase" />
+      <img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-17-qIFdk81O.svg" alt="Microsoft" />
+      <img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-18-D3yypAbo.svg" alt="Perplexity" />
 
-        <form class="hero-form">
-          <input type="email" class="hero-input" placeholder="Email address" required>
-          <button type="submit" class="btn btn-primary">Start now</button>
-        </form>
+      <img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-19-NbuxOm-h.svg" alt="HubSpot" />
+      <img
+        src="data:image/svg+xml,%3csvg%20xmlns:xlink='http://www.w3.org/1999/xlink'%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='27'%20viewBox='0%200%2024%2027'%20fill='none'%20class='max-md:h-[20px]'%3e%3cg%20clip-path='url(%23clip0_8659_7175)'%20fill='none'%3e%3cpath%20d='M13.8131%2011.1672L22.3754%200.163651H20.3464L12.9118%209.7179L6.97379%200.163651H0.125L9.10443%2014.6114L0.125%2026.1503H2.1541L10.0052%2016.0607L16.2762%2026.1503H23.125L13.8126%2011.1672H13.8131ZM11.034%2014.7387L10.1242%2013.3L2.88521%201.85237H6.00179L11.8437%2011.091L12.7535%2012.5296L20.3474%2024.5384H17.2308L11.034%2014.7392V14.7387Z'%20fill='lab(100%200%200)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_8659_7175'%3e%3crect%20width='23'%20height='26'%20fill='white'%20transform='translate(0.125%200.163651)'%3e%3c/rect%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+        alt="X" />
+      <img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-21-LCkQv7Wz.svg" alt="PayPal" />
+      <img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-22-nSfDTNzJ.svg" alt="Lovable" />
+    </div>
+  </section>
 
-        <div class="hero-image-container">
-          <img src="./Mintlify - The Intelligent Documentation Platform_files/hero-image-dark.svg"
-            alt="Mintlify Dashboard" class="hero-image">
+  <section class="intelligence">
+    <div class="intelligence-header">
+      <h2>Built for the intelligence age</h2>
+      <p>
+        Integrate AI into every part of your docs lifecycle. Woven into how
+        your knowledge is written, maintained, and understood by both users
+        and LLMs.
+      </p>
+    </div>
+
+    <div class="intelligence-grid">
+      <div class="intel-card">
+        <span class="card-tag">LLMS, TXT & MCP</span>
+        <h3>Built for both people and AI</h3>
+        <p>
+          Ensure your product shows up in the AI workflows users already rely
+          on. We support llms.txt, MCP, and whatever comes next.
+        </p>
+
+        <div class="img-placeholder">
+          <img src="assets/intel-1.png" />
         </div>
       </div>
-    </section>
 
-        <!-- Social Proof Section -->
-        <section class="social-proof">
-            <div class="container">
-                <p class="social-proof-label">Trusted by 3,000+ startups and enterprises</p>
-                <div class="logos-grid">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/anthropic.svg" alt="Anthropic" class="logo-item" style="height: 28px;">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/vercel.png" alt="Vercel" class="logo-item">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/perplexity.png" alt="Perplexity" class="logo-item">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/replit.png" alt="Replit" class="logo-item">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/resend.png" alt="Resend" class="logo-item"> <!-- Guessing resend exists or I'll use another -->
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/cursor.png" alt="Cursor" class="logo-item"> <!-- Guessing Cursor exists or I'll use another -->
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/turso.png" alt="Turso" class="logo-item"> <!-- Guessing Turso exists or I'll use another -->
-                </div>
-                <!-- Fallback to just the ones I saw in the list if guessing fails, but I'll stick to the safe list first -->
-                 <div class="logos-grid">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/anthropic.svg" alt="Anthropic" class="logo-item" style="height: 28px;">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/vercel.png" alt="Vercel" class="logo-item">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/perplexity.png" alt="Perplexity" class="logo-item">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/replit.png" alt="Replit" class="logo-item">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/kalshi.png" alt="Kalshi" class="logo-item">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/fidelity.png" alt="Fidelity" class="logo-item">
-                    <img src="./Mintlify - The Intelligent Documentation Platform_files/cognition.png" alt="Cognition" class="logo-item">
-                </div>
-            </div>
-        </section>
+      <div class="intel-card">
+        <span class="card-tag">AGENT</span>
+        <h3>Self-updating knowledge management</h3>
+        <p>
+          Draft, edit, and maintain content with a context-aware agent. Move
+          faster and more consistently without the documentation debt.
+        </p>
 
-        <!-- Feature Split: Beautiful Documentation -->
-        <section class="feature-split">
-            <div class="container">
-                 <div class="feature-content">
-                    <h2 class="section-title">Beautiful documentation<br>that converts</h2>
-                    <p class="section-description">
-                        Mintlify is built for performance and completely customizable. 
-                        Give your users the reading experience they deserve.
-                    </p>
-                    <ul class="feature-list">
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span><strong>MDX Support</strong>: Write in markdown, with React components.</span>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span><strong>Custom Styling</strong>: Match your brand identity perfectly.</span>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span><strong>API Reference</strong>: Generate beautiful API docs automatically.</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn btn-primary dropdown-btn" style="margin-top: 1.5rem;">
-                        View Documentation
-                    </a>
-                 </div>
-                 <div class="feature-visual">
-                    <!-- Code block simulation -->
-                    <div class="code-window">
-                        <div class="window-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                            <span class="window-title">mint.json</span>
-                        </div>
-                        <pre class="code-content">
-<code><span class="key">"name"</span>: <span class="string">"Mintlify"</span>,
-<span class="key">"logo"</span>: {
-  <span class="key">"light"</span>: <span class="string">"/logo/light.svg"</span>,
-  <span class="key">"dark"</span>: <span class="string">"/logo/dark.svg"</span>
-},
-<span class="key">"colors"</span>: {
-  <span class="key">"primary"</span>: <span class="string">"#16A34A"</span>,
-  <span class="key">"light"</span>: <span class="string">"#4ADE80"</span>,
-  <span class="key">"dark"</span>: <span class="string">"#15803D"</span>
-},
-<span class="key">"navigation"</span>: [
-  {
-    <span class="key">"group"</span>: <span class="string">"Getting Started"</span>,
-    <span class="key">"pages"</span>: [<span class="string">"introduction"</span>, <span class="string">"quickstart"</span>]
-  }
-]</code></pre>
-                    </div>
-                 </div>
-            </div>
-        </section>
-
-        <!-- Analytics Section -->
-        <section class="feature-split reverse">
-            <div class="container">
-                 <div class="feature-visual">
-                    <!-- Analytics Graph Simulation -->
-                    <div class="analytics-card">
-                        <div class="card-header">
-                            <div>
-                                <div class="card-label">Total Views</div>
-                                <div class="card-value">24.5k</div>
-                            </div>
-                            <div class="card-badge">+12%</div>
-                        </div>
-                        <div class="graph-placeholder">
-                            <!-- CSS-only simple graph bars -->
-                            <div class="bar" style="height: 40%"></div>
-                            <div class="bar" style="height: 60%"></div>
-                            <div class="bar" style="height: 50%"></div>
-                            <div class="bar" style="height: 70%"></div>
-                            <div class="bar" style="height: 90%"></div>
-                            <div class="bar" style="height: 60%"></div>
-                            <div class="bar active" style="height: 80%"></div>
-                        </div>
-                    </div>
-                 </div>
-                 <div class="feature-content">
-                    <h2 class="section-title">Analyze user<br>engagement</h2>
-                    <p class="section-description">
-                        Understand what your users are looking for with built-in analytics. 
-                        Optimize your documentation based on real data.
-                    </p>
-                    <ul class="feature-list">
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span><strong>Search Insights</strong>: See what users are searching for.</span>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span><strong>Page Views</strong>: Track popular content.</span>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <span><strong>Feedback</strong>: Collect user feedback directly.</span>
-                        </li>
-                    </ul>
-                 </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <h2 class="cta-title">Ready to build<br>documentation?</h2>
-                <p class="cta-description">Join thousands of developers writing documentation the modern way.</p>
-                <div class="cta-actions">
-                    <a href="#" class="btn btn-primary">Start for free</a>
-                    <a href="#" class="btn btn-secondary">Contact sales</a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4 class="footer-heading">Product</h4>
-                    <a href="#" class="footer-link">Documentation</a>
-                    <a href="#" class="footer-link">Pricing</a>
-                    <a href="#" class="footer-link">Showcase</a>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Company</h4>
-                    <a href="#" class="footer-link">About</a>
-                    <a href="#" class="footer-link">Blog</a>
-                    <a href="#" class="footer-link">Careers</a>
-                    <a href="#" class="footer-link">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Legal</h4>
-                    <a href="#" class="footer-link">Privacy Policy</a>
-                    <a href="#" class="footer-link">Terms of Service</a>
-                </div>
-                <div class="footer-col brand-col">
-                    <div class="footer-logo">Mintlify</div>
-                    <p class="footer-copyright">© 2026 Mintlify, Inc.</p>
-                </div>
-            </div>
+        <div class="img-placeholder">
+          <div class="svg-placeholder small">
+            <img src="assets/intel-2.png" alt="" />
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
 
-  </main>
+    <div class="assistant-card">
+      <span class="card-tag">ASSISTANT</span>
+      <h3>Intelligent assistance for your users</h3>
+      <p>
+        Turn every documentation visit into a guided conversation. Your AI
+        assistant understands context and delivers what users need.
+      </p>
 
+      <div class="img-placeholder">
+        <img src="assets/intel-3.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="enterprise">
+    <div class="inner">
+      <div class="enterprise-header">
+        <span class="enterprise-tag">ENTERPRISE REINVENTION</span>
+
+        <div class="enterprise-top">
+          <div class="enterprise-text">
+            <h2>Bring intelligence to<br />enterprise knowledge</h2>
+            <p>
+              Modernize without the rebuild with enterprise-grade professional
+              service & security.
+            </p>
+          </div>
+
+          <button class="enterprise-cta">Explore for enterprise</button>
+        </div>
+
+        <div class="enterprise-features">
+          <div class="feature">
+            <div class="icon-placeholder">
+              <img src="assets/download (2).svg" alt="" />
+            </div>
+            <h4>Build with partnership</h4>
+            <p>
+              Direct, white-glove access to our documentation experts.
+              Dedicated migration support and guidance tailored to your setup,
+              and elevated support SLAs.
+            </p>
+          </div>
+
+          <div class="feature">
+            <div class="icon-placeholder">
+              <img src="assets/download (3).svg" alt="" />
+            </div>
+            <h4>Compliance and access control</h4>
+            <p>
+              Compliant with SOC 2, and in the process for ISO/27001 and GDPR
+              compliance to meet your internal and external data requirements.
+              Secure access and provisioning with SAML-based SSO.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="customer-story">
+        <div class="story-text">
+          <span class="story-tag">CUSTOMER STORY</span>
+          <h3>
+            See how Anthropic accelerates<br />AI development with Mintlify
+          </h3>
+          <a href="#">Read story →</a>
+
+          <div class="story-stats">
+            <div>
+              <strong>2M+</strong>
+              <span>Monthly active developers</span>
+            </div>
+            <div>
+              <strong>3+</strong>
+              <span>Products serviced: Claude API, MCP, and Claude Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="enterprise-logos">
+        <span><img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-42-iTp6RUvq.svg"
+            alt="anthropic" /></span>
+        <span><img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-43-CVY4Qc4c.svg" alt="coinbase" /></span>
+        <span><img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-44-KRVDdtm2.svg" alt="hubspot" /></span>
+        <span><img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-45-D6Pd557u.svg" alt="zapier" /></span>
+        <span><img src="https://mintlify-clone-bay.vercel.app/assets/svgexport-46-D5PG1ZGk.svg" alt="" /></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="customers">
+    <div class="customers-header">
+      <span class="customers-tag">CUSTOMERS</span>
+      <h2>Unlock knowledge for any industry</h2>
+      <p>
+        From frontier AI companies to consumer brands, leaders across
+        industries scale with Mintlify.
+      </p>
+    </div>
+
+    <div class="customers-grid">
+      <div class="customer-card">
+        <div class="customer-image">
+          <img src="https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fperplexity.png&w=1080&q=75"
+            alt="Perplexity" />
+        </div>
+        <p class="customer-desc">
+          How Perplexity transformed its documentation into an AI-native
+          developer experience that matches the pace of innovation.
+        </p>
+        <a href="#">Read story →</a>
+      </div>
+
+      <div class="customer-card">
+        <div class="customer-image">
+          <img src="https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fx.png&w=1080&q=75" alt="X" />
+        </div>
+        <p class="customer-desc">
+          How X is using Mintlify to power the developer experience for the
+          global town square.
+        </p>
+        <a href="#">Read story →</a>
+      </div>
+
+      <div class="customer-card">
+        <div class="customer-image">
+          <img src="https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fkalshi.png&w=1080&q=75" alt="Kalshi" />
+        </div>
+        <p class="customer-desc">
+          How Kalshi helps developers discover what's possible faster and
+          drive broader adoption.
+        </p>
+        <a href="#">Read story →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="final-cta-inner">
+      <h2>
+        Make documentation<br />
+        your winning advantage
+      </h2>
+
+      <p class="final-cta-sub">
+        Join the leaders of tomorrow to future proof your documentation today.
+      </p>
+
+      <div class="final-cta-buttons">
+        <button class="primary-btn">Get started for free</button>
+        <button class="secondary-btn">Get a demo</button>
+      </div>
+
+      <div class="final-cta-divider"></div>
+
+      <div class="final-cta-features">
+        <div class="cta-feature">
+          <div class="cta-icon">
+            <img
+              src="data:image/svg+xml,%3csvg%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20class='shrink-0%20select-none'%20width='32'%20height='32'%20%3e%3cpath%20opacity='0.2'%20d='M7.56788%200.89724C8.72116%200.409204%2010%201.2559%2010%202.509V6H8.75C7.78379%206%207%206.78379%207%207.75V16.25C7%2016.6631%207.33394%2016.9981%207.74658%2017H2.75C2.33579%2017%202%2016.6642%202%2016.25V4.41199C2%203.7099%202.41973%203.07374%203.06862%202.79992L7.56788%200.89724Z'%20fill='lab(79.9844%20-59.6292%2022.5096)'%3e%3c/path%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M8.75%206C7.78379%206%207%206.78379%207%207.75V16.25C7%2016.6642%207.33579%2017%207.75%2017H15.25C15.6642%2017%2016%2016.6642%2016%2016.25V7.75C16%206.78379%2015.2162%206%2014.25%206H8.75ZM10.25%209C10.6642%209%2011%209.33579%2011%209.75V10.25C11%2010.6642%2010.6642%2011%2010.25%2011C9.83579%2011%209.5%2010.6642%209.5%2010.25V9.75C9.5%209.33579%209.83579%209%2010.25%209ZM13.5%209.75C13.5%209.33579%2013.1642%209%2012.75%209C12.3358%209%2012%209.33579%2012%209.75V10.25C12%2010.6642%2012.3358%2011%2012.75%2011C13.1642%2011%2013.5%2010.6642%2013.5%2010.25V9.75ZM10.25%2012C10.6642%2012%2011%2012.3358%2011%2012.75V13.25C11%2013.6642%2010.6642%2014%2010.25%2014C9.83579%2014%209.5%2013.6642%209.5%2013.25V12.75C9.5%2012.3358%209.83579%2012%2010.25%2012ZM13.5%2012.75C13.5%2012.3358%2013.1642%2012%2012.75%2012C12.3358%2012%2012%2012.3358%2012%2012.75V13.25C12%2013.6642%2012.3358%2014%2012.75%2014C13.1642%2014%2013.5%2013.6642%2013.5%2013.25V12.75Z'%20fill='lab(79.9844%20-59.6292%2022.5096)'%3e%3c/path%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M1%2016.25C1%2015.8358%201.33579%2015.5%201.75%2015.5H16.25C16.6642%2015.5%2017%2015.8358%2017%2016.25C17%2016.6642%2016.6642%2017%2016.25%2017H1.75C1.33579%2017%201%2016.6642%201%2016.25Z'%20fill='lab(79.9844%20-59.6292%2022.5096)'%3e%3c/path%3e%3c/svg%3e"
+              alt="" />
+          </div>
+          <h4>Pricing on your terms</h4>
+          <p>Pick the plan that works best for you</p>
+          <a href="#">Pricing details →</a>
+        </div>
+
+        <div class="cta-feature">
+          <div class="cta-icon">
+            <img
+              src="data:image/svg+xml,%3csvg%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20class='shrink-0%20select-none'%20width='32'%20height='32'%20%3e%3cpath%20d='M5.37701%202.01401C3.78843%202.01401%202.56755%202.561%201.85582%202.9811C1.31588%203.29978%201.00101%203.87517%201.00101%204.48701V13.57C1.00101%2014.7707%202.20639%2015.6627%203.36965%2015.2049C3.9013%2014.9951%204.57667%2014.8229%205.36584%2014.822C6.60305%2014.8203%207.5635%2015.2391%208.13255%2015.5674C8.39841%2015.7201%208.69579%2015.801%209.00001%2015.801V3.05078C8.29992%202.62423%207.0284%202.01401%205.37701%202.01401Z'%20fill='lab(79.9844%20-59.6292%2022.5096)'%3e%3c/path%3e%3cpath%20opacity='0.2'%20d='M12.623%202.01401C14.2116%202.01401%2015.4325%202.561%2016.1442%202.9811C16.6841%203.29978%2016.999%203.87517%2016.999%204.48701V13.57C16.999%2014.7707%2015.7936%2015.6627%2014.6304%2015.2049C14.0987%2014.9951%2013.4233%2014.8229%2012.6342%2014.822C11.397%2014.8203%2010.4379%2015.2383%209.86882%2015.5666C9.60296%2015.7193%209.30422%2015.801%209%2015.801V3.05078C9.70009%202.62423%2010.9716%202.01401%2012.623%202.01401Z'%20fill='lab(79.9844%20-59.6292%2022.5096)'%3e%3c/path%3e%3c/svg%3e"
+              alt="" />
+          </div>
+          <h4>Start building</h4>
+          <p>Deploy your documentation in minutes</p>
+          <a href="#">Quickstart →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- Top bar -->
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-dot"></span>
+          <span>mintlify</span>
+        </div>
+
+        <div class="footer-socials">
+          <a href="#">in</a>
+          <a href="#">X</a>
+          <a href="#">⌂</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <!-- Links grid -->
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <a href="#">Startups</a>
+          <a href="#">Enterprise</a>
+          <a href="#">Switch</a>
+          <a href="#">OSS Program</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>RESOURCES</h4>
+          <a href="#">Customers</a>
+          <a href="#">Blog</a>
+          <a href="#">Pricing</a>
+          <a href="#">Guides</a>
+          <a href="#">Feature Requests</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>DOCUMENTATION</h4>
+          <a href="#">Getting Started</a>
+          <a href="#">API Reference</a>
+          <a href="#">Components</a>
+          <a href="#">Changelog</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <a href="#">Careers</a>
+          <a href="#">Wall of Love</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>LEGAL</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Responsible Disclosure</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+          <a href="#">DSR/DSAR</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <!-- Security -->
+      <div class="footer-security">
+        <span>Backed by Enterprise-Grade Security</span>
+        <div class="security-badge">SOC 2</div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          All systems normal
+        </div>
+
+        <span class="copyright">© 2026 Mintlify, Inc.</span>
+
+        <div class="footer-controls">
+          <span>🖥</span>
+          <span>☉</span>
+          <span>☾</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
