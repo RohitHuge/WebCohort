@@ -18,3 +18,5 @@ This folder contains the HTML, CSS, and JavaScript files for the project.
 
 ## Files
 *   `index.html`: The main structure of the web page.
+
+Added the clone of Cursor and Mintlify websites.
